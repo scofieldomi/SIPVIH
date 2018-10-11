@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ToggleGroup ?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.PatientChangeController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="300.0" prefWidth="200.0" stylesheets="@../../style/style.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Changement de traitement du patient">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="19.0" layoutY="173.0" prefHeight="30.0" prefWidth="250.0" text="Charge virale plasmatique : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="chargeViralePlasmatique" layoutX="271.0" layoutY="159.0" prefHeight="44.0" prefWidth="186.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="59.0" layoutY="224.0" text="Charge virale sur DBS : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="chargeViraleDBS" layoutX="271.0" layoutY="210.0" prefHeight="44.0" prefWidth="186.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="14.0" layoutY="314.0" prefHeight="44.0" prefWidth="260.0" text="Schéma de traitement suivi : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="traitementR" layoutX="269.0" layoutY="314.0" prefHeight="42.0" prefWidth="190.0" text="schema">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="269.0" prefHeight="30.0" prefWidth="250.0" text="Le type de traitement suivi : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="typeTraitement" layoutX="271.0" layoutY="262.0" prefHeight="44.0" prefWidth="186.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Première ligne" />
+                                       <String fx:value="Deuxième ligne" />
+                                       <String fx:value="Troisième ligne" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label fx:id="codeR" layoutX="18.0" layoutY="119.0" prefHeight="30.0" prefWidth="61.0" text="code" visible="false">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dateNaissanceR" layoutX="103.0" layoutY="119.0" prefHeight="30.0" prefWidth="152.0" text="date" visible="false">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="serologieR" layoutX="289.0" layoutY="113.0" prefHeight="30.0" prefWidth="135.0" text="serologie" visible="false">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="255.0" layoutY="463.0" mnemonicParsing="false" onAction="#traitementVirologie" prefHeight="54.0" prefWidth="186.0" text="Suivant">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="64.0" layoutY="463.0" mnemonicParsing="false" onAction="#annulerChangement" prefHeight="54.0" prefWidth="150.0" text="Annuler">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Separator layoutX="466.0" layoutY="36.0" orientation="VERTICAL" prefHeight="508.0" prefWidth="9.0" />
+                              <Label layoutX="494.0" layoutY="59.0" text="Changement de ligne thérapeutique">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="475.0" layoutY="128.0" text="Schéma recommandé :">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop1" layoutX="710.0" layoutY="121.0" onMouseClicked="#choisirSchema1" prefHeight="44.0" prefWidth="194.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop2" layoutX="718.0" layoutY="166.0" onMouseClicked="#choisirSchema2" prefHeight="40.0" prefWidth="174.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop3" layoutX="720.0" layoutY="220.0" onMouseClicked="#choisirSchema3" prefHeight="39.0" prefWidth="174.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="475.0" layoutY="275.0" text="Schéma alternatif :">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop4" layoutX="721.0" layoutY="268.0" onMouseClicked="#choisirSchema4" prefHeight="44.0" prefWidth="183.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop5" layoutX="724.0" layoutY="318.0" onMouseClicked="#choisirSchema5" prefHeight="36.0" prefWidth="188.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop6" layoutX="726.0" layoutY="367.0" onMouseClicked="#choisirSchema6" prefHeight="39.0" prefWidth="174.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop7" layoutX="731.0" layoutY="422.0" onMouseClicked="#choisirSchema7" prefHeight="41.0" prefWidth="174.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prop8" layoutX="913.0" layoutY="126.0" prefHeight="37.0" prefWidth="84.0" text="Label" visible="false" />
+                              <Label fx:id="prop9" layoutX="913.0" layoutY="163.0" prefHeight="33.0" prefWidth="75.0" text="Label" visible="false" />
+                              <Label fx:id="prop10" layoutX="918.0" layoutY="214.0" prefHeight="36.0" prefWidth="72.0" text="Label" visible="false" />
+                              <Label fx:id="prop11" layoutX="918.0" layoutY="272.0" prefHeight="35.0" prefWidth="78.0" text="Label" visible="false" />
+                              <Label fx:id="prop12" layoutX="918.0" layoutY="309.0" prefHeight="38.0" prefWidth="75.0" text="Label" visible="false" />
+                              <Label fx:id="prop13" layoutX="918.0" layoutY="378.0" prefHeight="34.0" prefWidth="76.0" text="Label" visible="false" />
+                              <Label fx:id="prop14" layoutX="916.0" layoutY="419.0" prefHeight="32.0" prefWidth="76.0" text="Label" visible="false" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.ChangerARVController">
+   <children>
+      <Label layoutX="22.0" layoutY="67.0" text="Choisir les effets indésirables constatés : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="anemie_grave" layoutX="84.0" layoutY="120.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Anémie sévère">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="neutropenie_grave" layoutX="84.0" layoutY="157.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="212.0" text="Neutropénie sévère">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="acidose_lactique" layoutX="84.0" layoutY="193.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="308.0" text="Acidose lactique">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="lipodystrophie" layoutX="84.0" layoutY="225.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="183.0" text="Lipodystrophie">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="toxicite_renale" layoutX="82.0" layoutY="260.0" mnemonicParsing="false" text="Toxicité rénale">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="toxicite_systeme_nerveux" layoutX="82.0" layoutY="298.0" mnemonicParsing="false" text="Toxicité sur le système nerveux central">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="hepatite" layoutX="82.0" layoutY="335.0" mnemonicParsing="false" text="Hépatite ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="rash_modere" layoutX="84.0" layoutY="369.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="171.0" text="Rash modéré">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="rash_grave" layoutX="84.0" layoutY="400.0" mnemonicParsing="false" text="Rash sévère">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="482.0" layoutY="517.0" mnemonicParsing="false" onAction="#traitementEffet" prefHeight="45.0" prefWidth="161.0" text="Suivant">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Separator layoutX="472.0" layoutY="116.0" orientation="VERTICAL" prefHeight="380.0" prefWidth="0.0" />
+      <Label layoutX="478.0" layoutY="369.0" text="Schema thérapeutique :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="schemaTherapeutique" layoutX="690.0" layoutY="362.0" prefHeight="45.0" prefWidth="171.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="234.0" layoutY="517.0" mnemonicParsing="false" onAction="#btnRetour" prefHeight="45.0" prefWidth="161.0" text="Annuler">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="intolerance_gastro_intestinale_severe" layoutX="84.0" layoutY="430.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="375.0" text="Intolérance gastro-intestinale sévère">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="osteoporose" layoutX="82.0" layoutY="460.0" mnemonicParsing="false" text="Ostéoporose">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="diarrhee_vomissement_naussee" layoutX="495.0" layoutY="127.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="358.0" text="Diarrhée, vomissements, nausées">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="pancreatite" layoutX="495.0" layoutY="164.0" mnemonicParsing="false" text="Pancréatite">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="reaction_hypersensibilite" layoutX="495.0" layoutY="200.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="308.0" text="Réactions d'hypersensibilité">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </CheckBox>
+   </children>
+</Pane>

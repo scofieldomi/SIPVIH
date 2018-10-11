@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ToggleGroup ?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.PatientChangeController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="300.0" prefWidth="200.0" stylesheets="@../../style/style.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Changer traitement ARV du patient">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="52.0" text="Choisir les effets indésirables constatés : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="anemie_grave" layoutX="30.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Anémie sévère">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="neutropenie_grave" layoutX="30.0" layoutY="139.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="212.0" text="Neutropénie sévère">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="acidose_lactique" layoutX="30.0" layoutY="177.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="308.0" text="Acidose lactique">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="lipodystrophie" layoutX="30.0" layoutY="216.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="183.0" text="Lipodystrophie">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="toxicite_renale" layoutX="30.0" layoutY="255.0" mnemonicParsing="false" text="Toxicité rénale">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="toxicite_systeme_nerveux" layoutX="30.0" layoutY="292.0" mnemonicParsing="false" text="Toxicité sur le système nerveux central">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="hepatite" layoutX="30.0" layoutY="329.0" mnemonicParsing="false" text="Hépatite ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="rash_modere" layoutX="31.0" layoutY="365.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" text="Rash modéré">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="rash_grave" layoutX="30.0" layoutY="402.0" mnemonicParsing="false" text="Rash sévère">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="intolerance_gastro_intestinale_severe" layoutX="30.0" layoutY="438.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="375.0" text="Intolérance gastro-intestinale sévère">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="osteoporose" layoutX="31.0" layoutY="475.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" text="Ostéoporose">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <Separator layoutX="419.0" layoutY="99.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="3.0" />
+                              <CheckBox fx:id="diarrhee_vomissement_naussee" layoutX="432.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="358.0" text="Diarrhée, vomissements, nausées">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="pancreatite" layoutX="432.0" layoutY="139.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Pancréatite">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="reaction_hypersensibilite" layoutX="432.0" layoutY="177.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="308.0" text="Réactions d'hypersensibilité">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </CheckBox>
+                              <Label fx:id="codeR" layoutX="476.0" layoutY="224.0" prefHeight="45.0" prefWidth="181.0" text="Label" visible="false">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="serologieR" layoutX="476.0" layoutY="264.0" prefHeight="43.0" prefWidth="190.0" text="Label" visible="false">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dateNaissanceR" layoutX="475.0" layoutY="311.0" prefHeight="37.0" prefWidth="164.0" text="Label" visible="false">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="518.0" layoutY="520.0" mnemonicParsing="false" onAction="#traitementEffet" prefHeight="45.0" prefWidth="161.0" text="Suivant">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="195.0" layoutY="520.0" mnemonicParsing="false" onAction="#annulerChangement" prefHeight="45.0" prefWidth="161.0" text="Annuler">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="traitementR" layoutX="481.0" layoutY="416.0" prefHeight="44.0" prefWidth="201.0" text="Label">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="432.0" layoutY="372.0" prefHeight="38.0" prefWidth="299.0" text="Traitement suivi par le patient : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.AccueilController">
+   <children>
+             <Label fx:id="D" layoutX="83.0" layoutY="429.0" prefHeight="39.0" prefWidth="201.0" text="Amelioration après trois (3) jours ?">
+              <font>
+               <Font size="18.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui" layoutX="353.0" layoutY="436.0" mnemonicParsing="false" onAction="#apres3joursDC" prefHeight="32.0" prefWidth="110.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon" layoutX="455.0" layoutY="434.0" mnemonicParsing="false" onAction="#apres3joursDC" text="Non" toggleGroup="$signeDeGravite">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>   
+       
+              <Label fx:id="D6" layoutX="89.0" layoutY="337.0" prefHeight="39.0" prefWidth="188.0" text="Rechute ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui6" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#rechuteDC" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite6" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon6" layoutX="423.0" layoutY="341.0" mnemonicParsing="false" onAction="#rechuteDC" text="Non" toggleGroup="$signeDeGravite6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+             
+           <RadioButton fx:id="SGoui7" layoutX="359.0" layoutY="216.0" mnemonicParsing="false" onAction="#apres3jours" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite7" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon7" layoutX="445.0" layoutY="217.0" mnemonicParsing="false" onAction="#apres3jours" text="Non" toggleGroup="$signeDeGravite7">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>   
+                        
+      <AnchorPane layoutX="67.0" layoutY="376.0" prefHeight="59.0" prefWidth="200.0" />
+      <Separator layoutX="633.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="0.0" />
+      <Label fx:id="resultatDiagnostique" layoutX="652.0" layoutY="74.0" prefHeight="98.0" prefWidth="233.0" text="Juste un test">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="24.0" prefHeight="30.0" prefWidth="592.0" text="Diarrhée chronique chez un sujet infectés par le VIH au CSPS " textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="30.0" prefHeight="59.0" prefWidth="493.0" text="Traiter avec cotrimoxazole 480 mg 1cpx2/j pendant 5 jours" textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="84.0" prefHeight="39.0" prefWidth="68.0" text="ou " textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="113.0" prefHeight="59.0" prefWidth="405.0" text="Métronidazole ou 1,5g  pendant 10 jours" textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+                        
+                              
+                                                   
+                     <Label fx:id="D7" layoutX="88.0" layoutY="212.0" prefHeight="39.0" prefWidth="266.0" text="Amelioration après trois (3) jours ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+              </Label>
+       
+   </children>
+</AnchorPane>

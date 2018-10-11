@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.ChangerARVController">
+   <children>
+      <Label layoutX="22.0" layoutY="91.0" prefHeight="30.0" prefWidth="250.0" text="Charge virale plasmatique : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="157.0" text="Charge virale sur DBS : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="chargeViralePlasmatique" layoutX="280.0" layoutY="84.0" prefHeight="44.0" prefWidth="186.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="chargeViraleDBS" layoutX="280.0" layoutY="150.0" prefHeight="44.0" prefWidth="186.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="22.0" layoutY="213.0" prefHeight="30.0" prefWidth="250.0" text="Le type de traitement suivi : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="typeTraitement" layoutX="280.0" layoutY="206.0" prefHeight="44.0" prefWidth="186.0">
+          <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Première ligne" />
+                    <String fx:value="Deuxième ligne" />
+                    <String fx:value="Troisième ligne" />
+                </FXCollections>
+            </items>
+         
+      </ComboBox>
+      <Label layoutX="37.0" layoutY="268.0" text="Sérologie du patient : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="327.0" text="Catégorie du patient : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="serologie" layoutX="280.0" layoutY="261.0" prefHeight="44.0" prefWidth="186.0">
+         <items>
+                <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="VIH_1" />
+                      <String fx:value="VIH_2" />
+                      <String fx:value="VIH_1_2" />
+                      </FXCollections>
+           </items>
+       </ComboBox>
+      <Button layoutX="289.0" layoutY="500.0" mnemonicParsing="false" onAction="#traitementVirologie" prefHeight="54.0" prefWidth="186.0" text="Suivant">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="categoriePatient" layoutX="280.0" layoutY="320.0" prefHeight="44.0" prefWidth="195.0">
+          <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="Enfant moins de 3 ans" />
+                  <String fx:value="Enfant plus de 3 ans" />
+                   <String fx:value="Adolescent" />
+                   <String fx:value="Adulte" />
+               </FXCollections>
+          </items>
+      </ComboBox>
+      <Separator layoutX="486.0" layoutY="61.0" orientation="VERTICAL" prefHeight="439.0" prefWidth="0.0" />
+      <Label layoutX="541.0" layoutY="59.0" text="Changement de ligne thérapeutique">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="498.0" layoutY="106.0" text="Schéma recommandé :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop1" layoutX="699.0" layoutY="99.0" prefHeight="44.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="498.0" layoutY="250.0" text="Schéma alternatif :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop2" layoutX="696.0" layoutY="150.0" prefHeight="30.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop3" layoutX="699.0" layoutY="191.0" prefHeight="30.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop4" layoutX="678.0" layoutY="253.0" prefHeight="30.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop5" layoutX="678.0" layoutY="299.0" prefHeight="36.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop6" layoutX="678.0" layoutY="349.0" prefHeight="30.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prop7" layoutX="678.0" layoutY="394.0" prefHeight="30.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="101.0" layoutY="500.0" mnemonicParsing="false" onAction="#btnRetour" prefHeight="54.0" prefWidth="150.0" text="Annuler">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="17.0" layoutY="371.0" prefHeight="44.0" prefWidth="260.0" text="Schéma de traitement suivi : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="schemaTherapeutique" layoutX="280.0" layoutY="373.0" prefHeight="44.0" prefWidth="195.0" />
+   </children>
+   <padding>
+      <Insets top="50.0" />
+   </padding>
+</Pane>

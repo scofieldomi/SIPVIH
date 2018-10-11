@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.AccueilController">
+   <children>
+             <Label layoutX="14.0" layoutY="39.0" prefHeight="39.0" prefWidth="201.0" text="Signe de gravité ?">
+              <font>
+               <Font size="18.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui" layoutX="215.0" layoutY="43.0" mnemonicParsing="false" onAction="#algorithme" prefHeight="32.0" prefWidth="110.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon" layoutX="300.0" layoutY="44.0" mnemonicParsing="false" onAction="#algorithme" text="Non" toggleGroup="$signeDeGravite">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+                        
+                       <Label fx:id="D1" layoutX="50.0" layoutY="89.0" prefHeight="39.0" prefWidth="201.0" text="Le patient tousse ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui1" layoutX="319.0" layoutY="91.0" mnemonicParsing="false" onAction="#algorithme" prefHeight="32.0" prefWidth="110.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon1" layoutX="423.0" layoutY="92.0" mnemonicParsing="false" onAction="#algorithme" text="Non" toggleGroup="$signeDeGravite1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>       
+                        
+                              
+              <Label fx:id="D2" layoutX="50.0" layoutY="138.0" prefHeight="39.0" prefWidth="242.0" text="Le patient a des sueurs noctures ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui2" layoutX="319.0" layoutY="141.0" mnemonicParsing="false" onAction="#algorithme" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite2" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon2" layoutX="423.0" layoutY="143.0" mnemonicParsing="false" text="Non" toggleGroup="$signeDeGravite2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>          
+                        
+                        
+                         <Label fx:id="D3" layoutX="50.0" layoutY="185.0" prefHeight="39.0" prefWidth="233.0" text="Le patient a perdu du poids ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui3" layoutX="319.0" layoutY="187.0" mnemonicParsing="false" onAction="#algorithme" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite3" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon3" layoutX="423.0" layoutY="188.0" mnemonicParsing="false" text="Non" toggleGroup="$signeDeGravite3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>     
+                        
+                        
+               <Label fx:id="D4" layoutX="50.0" layoutY="231.0" prefHeight="39.0" prefWidth="201.0" text="Le malade a de la fièvre ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui4" layoutX="319.0" layoutY="234.0" mnemonicParsing="false" onAction="#algorithme" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite4" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon4" layoutX="423.0" layoutY="235.0" mnemonicParsing="false" onAction="#algorithme" text="Non" toggleGroup="$signeDeGravite4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+      <Separator layoutX="31.0" layoutY="85.0" orientation="VERTICAL" prefHeight="200.0" />    
+      
+                     <Label fx:id="D5" layoutX="50.0" layoutY="285.0" prefHeight="39.0" prefWidth="201.0" text="EXPERT BAAR ">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="positif" layoutX="319.0" layoutY="288.0" mnemonicParsing="false" onAction="#expertbaar" prefHeight="32.0" prefWidth="99.0" text="Positif">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite5" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="negatif" layoutX="423.0" layoutY="289.0" mnemonicParsing="false" onAction="#expertbaar" text="Negatif" toggleGroup="$signeDeGravite5">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>   
+       
+              <Label fx:id="D6" layoutX="44.0" layoutY="337.0" prefHeight="39.0" prefWidth="233.0" text="Prophylaxie au cotrimoxazole ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui6" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#prophilaxieaucotri" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite6" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon6" layoutX="423.0" layoutY="341.0" mnemonicParsing="false" onAction="#prophilaxieaucotri" text="Non" toggleGroup="$signeDeGravite6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+             
+           <RadioButton fx:id="SGoui7" layoutX="319.0" layoutY="390.0" mnemonicParsing="false" onAction="#apres3jours" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite7" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon7" layoutX="429.0" layoutY="391.0" mnemonicParsing="false" onAction="#apres3jours" text="Non" toggleGroup="$signeDeGravite7">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>   
+                        
+      <AnchorPane layoutX="67.0" layoutY="376.0" prefHeight="59.0" prefWidth="200.0">
+         <children>                                       
+                     <Label fx:id="D7" layoutX="-22.0" layoutY="14.0" prefHeight="39.0" prefWidth="266.0" text="Amelioration après trois (3) jours ?">
+                    <font>
+                     <Font size="16.0" />
+                    </font>
+                    </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="633.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="0.0" />
+      <Label layoutX="24.0" prefHeight="30.0" prefWidth="592.0" text="Problème respiratoire chez un sujet infectés par le VIH au CMA/Clinique " textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      
+                    <Label fx:id="D8" layoutX="34.0" layoutY="515.0" prefHeight="39.0" prefWidth="233.0" text="Amelioré ?">
+              <font>
+               <Font size="16.0" />
+              </font>
+             </Label>
+                        <RadioButton fx:id="SGoui8" layoutX="311.0" layoutY="519.0" mnemonicParsing="false" onAction="#prophilaxieaucotri" prefHeight="32.0" prefWidth="99.0" text="Oui">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="signeDeGravite8" />
+                           </toggleGroup>
+                        </RadioButton>
+                        
+                        <RadioButton fx:id="SGnon8" layoutX="437.0" layoutY="520.0" mnemonicParsing="false" onAction="#prophilaxieaucotri" text="Non" toggleGroup="$signeDeGravite8">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+      <Label fx:id="message1" layoutX="23.0" layoutY="446.0" prefHeight="30.0" prefWidth="592.0" textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="message2" layoutX="23.0" layoutY="476.0" prefHeight="30.0" prefWidth="592.0" textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="message3" layoutX="24.0" layoutY="551.0" prefHeight="30.0" prefWidth="592.0" textFill="#239e44">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+             
+   </children>
+</AnchorPane>

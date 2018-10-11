@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="394.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.AccueilController">
+    
+      <children>
+      <Label layoutX="30.0" layoutY="34.0" prefHeight="37.0" prefWidth="150.0" text="Centre de santé :">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ComboBox fx:id="centreSante" layoutX="197.0" layoutY="34.0" prefHeight="37.0" prefWidth="150.0">
+      <items>
+       <FXCollections fx:factory="observableArrayList">
+            <String fx:value="CHU" />
+            <String fx:value="CHR" />
+            <String fx:value="CS" />
+            <String fx:value="CSPS" />
+            <String fx:value="CM" />
+            <String fx:value="CMA" />
+       </FXCollections>
+    </items>
+   </ComboBox>
+      <CheckBox layoutX="194.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" text="Sauvegarder">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <Button fx:id="myButton" layoutX="111.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="99.0" text="Valider" />
+      <Label layoutX="32.0" layoutY="92.0" text="Profession : ">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ComboBox fx:id="profession" layoutX="197.0" layoutY="89.0" prefHeight="37.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Médecin" />
+                <String fx:value="Infirmier" />
+                <String fx:value="Sage femme" />
+                <String fx:value="Autre" />
+            </FXCollections>
+        </items>
+      </ComboBox>
+   </children>
+   
+   
+</AnchorPane>

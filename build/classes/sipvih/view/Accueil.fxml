@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.AccueilController">
+   <top>
+      <Label prefHeight="40.0" prefWidth="636.0" text="Système Intelligent de prise en charge du VIH/SIDA" textFill="#0b88db" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" top="20.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font></Label>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#affichePagePatient" prefHeight="135.0" prefWidth="221.0" text="Patient">
+               <GridPane.margin>
+                  <Insets left="30.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#affichePageARV" prefHeight="120.0" prefWidth="274.0" text="Traitement ARV" GridPane.columnIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pageMO" prefHeight="132.0" prefWidth="249.0" text="Maladies Opportunistes" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#affichePageChargeVirale" prefHeight="129.0" prefWidth="239.0" text="Charge virale" GridPane.rowIndex="1">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="129.0" prefWidth="277.0" text="Conseils pschyco-sociaux" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="125.0" prefWidth="239.0" text="Statistiques" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

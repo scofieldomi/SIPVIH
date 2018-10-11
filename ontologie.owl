@@ -1,0 +1,972 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.exemple.fr/famille#"
+    xmlns:maladies="http://www.medecine.fr/maladies#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.medecine.fr/maladies">
+    <rdfs:comment>
+			Il s'agit d'une ontologie exemple de la famille
+		</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Maladie"/>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteur_protease">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#ARV"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Schema"/>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Pathogene"/>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Paraclinique">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Signe"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Hematologie">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Paraclinique"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#PremiereLigne">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#TraitementARV"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#chargeViral">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Paraclinique"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Patient"/>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Opportuniste">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#DeuxiemeLigne">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Coinfection">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteur_fusion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#ARV"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#AutrePathogene">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Pathogene"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#TroisiemeLigne">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Immunologie">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Paraclinique"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Effet_Indesirable">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#StadeClinique"/>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteur_non_nucleosidique_transcriptase_inverse">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteurs_transcriptase_inverse"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Test_de_grossesse">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Paraclinique"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Biochimie">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Paraclinique"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteur_nucleotidique_transcriptase_inverse">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteurs_transcriptase_inverse"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Comorbidite">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteurs_nucleosidiques_transcripstase_inverse">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteurs_transcriptase_inverse"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#ARV">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.medecine.fr/maladies#Medicament"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Clinique">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Signe"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#VIH">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Pathogene"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Enfant">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteurs_transcriptase_inverse">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.medecine.fr/maladies#Inhibiteur_integrase">
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourSchemaTraitement">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#VIH"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#soigne">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Medicament"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#substituerPar">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Effet_Indesirable"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourEffetIndesirable">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Effet_Indesirable"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#appartient">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Schema"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#estUne"/>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourTraitement">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#initierTraitement">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourSigne">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Signe"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#prescrireTraitement">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#indiqueePour">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#typeVIH">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#VIH"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourSerologie">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#VIH"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#TraitementARV"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#aPourMaladie">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#StadeClinique"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.medecine.fr/maladies#estAtteint">
+    <rdfs:range rdf:resource="http://www.medecine.fr/maladies#Maladie"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#date_naissance">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#nom">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#name"/>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#precaution">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#effetIndesirable">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#posologieARV">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#tauxCD4">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#aPourCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#dateConsultation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.medecine.fr/maladies#nomAbrge">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.medecine.fr/maladies#ARV"/>
+  </owl:DatatypeProperty>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient11">
+    <maladies:date_naissance>2018-09-22</maladies:date_naissance>
+    <maladies:aPourCode>11</maladies:aPourCode>
+    <maladies:aPourSerologie>
+      <maladies:VIH rdf:about="http://www.medecine.fr/maladies#VIH_2">
+        <maladies:nom>VIH_2</maladies:nom>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:VIH>
+    </maladies:aPourSerologie>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:StadeClinique rdf:about="http://www.medecine.fr/maladies#stadeClinique1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:StadeClinique>
+  <maladies:Inhibiteur_fusion rdf:about="http://www.medecine.fr/maladies#Enfuvirtide">
+    <maladies:posologieARV></maladies:posologieARV>
+    <maladies:nomAbrge>T20</maladies:nomAbrge>
+    <maladies:nom>Enfuvirtide</maladies:nom>
+    <maladies:effetIndesirable></maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_fusion>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient4">
+    <maladies:date_naissance>1995-08-10</maladies:date_naissance>
+    <maladies:aPourCode>4</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/ETC+LPV/r">
+        <maladies:nom>AZT/ETC+LPV/r</maladies:nom>
+        <maladies:indiqueePour>
+          <maladies:Patient rdf:about="http://www.medecine.fr/maladies#Adulte">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </maladies:Patient>
+        </maladies:indiqueePour>
+        <maladies:appartient>
+          <maladies:Schema rdf:about="http://www.medecine.fr/maladies#alternatif">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </maladies:Schema>
+        </maladies:appartient>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+        <maladies:aPourSerologie>
+          <maladies:VIH rdf:about="http://www.medecine.fr/maladies#VIH_1_2">
+            <maladies:nom>VIH_1_2</maladies:nom>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </maladies:VIH>
+        </maladies:aPourSerologie>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+NVP">
+    <maladies:nom>ABC/3TC+NVP</maladies:nom>
+    <maladies:indiqueePour>
+      <maladies:Patient rdf:about="http://www.medecine.fr/maladies#EnfantPlus3Ans">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Patient>
+    </maladies:indiqueePour>
+    <maladies:indiqueePour>
+      <maladies:Patient rdf:about="http://www.medecine.fr/maladies#EnfantMoins3ans">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Patient>
+    </maladies:indiqueePour>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie>
+      <maladies:VIH rdf:about="http://www.medecine.fr/maladies#VIH_1">
+        <maladies:nom>VIH_1</maladies:nom>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:VIH>
+    </maladies:aPourSerologie>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#AZT+3TC+RAL">
+    <maladies:nom>AZT+3TC+RAL</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient>
+      <maladies:Schema rdf:about="http://www.medecine.fr/maladies#recommende">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Schema>
+    </maladies:appartient>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Rilpivirine">
+    <maladies:posologieARV></maladies:posologieARV>
+    <maladies:nomAbrge>RPV</maladies:nomAbrge>
+    <maladies:nom>Rilpivirine</maladies:nom>
+    <maladies:effetIndesirable></maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse>
+  <maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse rdf:about="http://www.medecine.fr/maladies#Emtricitadine">
+    <maladies:posologieARV>200mg/jour</maladies:posologieARV>
+    <maladies:nomAbrge>FTC</maladies:nomAbrge>
+    <maladies:nom>Emtricitabine</maladies:nom>
+    <maladies:effetIndesirable>Effets indésirables de faible intensité et transitoire</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse>
+  <maladies:Inhibiteur_integrase rdf:about="http://www.medecine.fr/maladies#Raltegravir">
+    <maladies:posologieARV>400mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>RAL</maladies:nomAbrge>
+    <maladies:nom>Raltegravir</maladies:nom>
+    <maladies:effetIndesirable>Vertiges, arthralgie, asthénie, douleurs abdominales, prurit, cytolyse hépatique</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_integrase>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient3">
+    <maladies:date_naissance>1999-08-17</maladies:date_naissance>
+    <maladies:aPourCode>3</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+NVP">
+        <maladies:nom>TDF/FTC+NVP</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient2">
+    <maladies:date_naissance>2003-08-08</maladies:date_naissance>
+    <maladies:aPourCode>2</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC/EFV">
+        <maladies:nom>TDF/FTC/EFV</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT+3TC+NVP">
+    <maladies:nom>AZT+3TC+NVP</maladies:nom>
+    <maladies:indiqueePour>
+      <maladies:Patient rdf:about="http://www.medecine.fr/maladies#AdolescentMoins19Ans">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Patient>
+    </maladies:indiqueePour>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF+FTC+NVP">
+    <maladies:nom>TDF+FTC+NVP</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+NVP">
+    <maladies:nom>ABC+3TC+NVP</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient17">
+    <maladies:aPourTraitement>
+      <maladies:TraitementARV rdf:about="http://www.medecine.fr/maladies#TDF/3TC+EFV">
+        <maladies:nom>TDF/3TC+EFV</maladies:nom>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:TraitementARV>
+    </maladies:aPourTraitement>
+    <maladies:date_naissance>1995-09-06</maladies:date_naissance>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <maladies:aPourCode>17</maladies:aPourCode>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF+FTC+EFV">
+    <maladies:nom>TDF+FTC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:StadeClinique rdf:about="http://www.medecine.fr/maladies#stdeCliinique4">
+    <maladies:nom>Stade clinique 4</maladies:nom>
+    <maladies:aPourMaladie>
+      <maladies:Opportuniste rdf:about="http://www.medecine.fr/maladies#Toxoplasmose">
+        <maladies:nom>Toxoplasmose cérebrale</maladies:nom>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Opportuniste>
+    </maladies:aPourMaladie>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:StadeClinique>
+  <maladies:StadeClinique rdf:about="http://www.medecine.fr/maladies#stadeClinique3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:StadeClinique>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+LPV/r_b">
+    <maladies:nom>AZT/3TC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+EFV">
+    <maladies:nom>TDF/FTC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Inhibiteur_integrase rdf:about="http://www.medecine.fr/maladies#Dolutegravir">
+    <maladies:posologieARV>50 mg/jour</maladies:posologieARV>
+    <maladies:nomAbrge>DTG</maladies:nomAbrge>
+    <maladies:nom>Dolutegravir</maladies:nom>
+    <maladies:effetIndesirable>Vertiges, hypersensibilité à type d'eruption cutanée, atteinte hépatite sévère</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_integrase>
+  <maladies:StadeClinique rdf:about="http://www.medecine.fr/maladies#stadeClinique2">
+    <maladies:nom>Stade clinique 2</maladies:nom>
+    <maladies:aPourMaladie>
+      <maladies:Opportuniste rdf:about="http://www.medecine.fr/maladies#Zona">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Opportuniste>
+    </maladies:aPourMaladie>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:StadeClinique>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+RAL">
+    <maladies:nom>ABC+3TC+RAL</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient9">
+    <maladies:date_naissance>2017-09-13</maladies:date_naissance>
+    <maladies:aPourCode>9</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+LPV/r">
+        <maladies:nom>ABC/3TC+LPV/r</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+EFV">
+    <maladies:nom>ABC+3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Etravirine">
+    <maladies:posologieARV>200mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>ETV</maladies:nomAbrge>
+    <maladies:nom>Etravirine</maladies:nom>
+    <maladies:effetIndesirable>Toxicité cutanée, réaction d'hypersensibilité sévère</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse>
+  <maladies:TraitementARV rdf:about="http://www.medecine.fr/maladies#TDF/ETC+LPV/r">
+    <maladies:nom>TDF/ETC+LPV/r</maladies:nom>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:TraitementARV>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT+3TC+LPV/r">
+    <maladies:nom>AZT+3TC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+DTG">
+    <maladies:nom>AZT/3TC+DTG</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient8">
+    <maladies:date_naissance>2006-08-11</maladies:date_naissance>
+    <maladies:aPourCode>8</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC/NVP">
+        <maladies:nom>AZT/3TC/NVP</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+DRV/r">
+    <maladies:nom>AZT/3TC+DRV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+EFV_b">
+    <maladies:nom>ABC+3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:Inhibiteur_nucleotidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Tenofovir_alafenamide">
+    <maladies:posologieARV>25mg/jour</maladies:posologieARV>
+    <maladies:nomAbrge>TAF</maladies:nomAbrge>
+    <maladies:nom>Tenofovir/alafenamide</maladies:nom>
+    <maladies:effetIndesirable>Augmentation significativement plus importante des paramètres lipidiques ( cholestérol total,fractions LDL et HDL, triglicérides</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_nucleotidique_transcriptase_inverse>
+  <maladies:Inhibiteur_protease rdf:about="http://www.medecine.fr/maladies#Darunavir_ritonavir">
+    <maladies:posologieARV>600mg/100mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>DRV/r</maladies:nomAbrge>
+    <maladies:nom>Darunavir/ritonavir</maladies:nom>
+    <maladies:effetIndesirable>Troubles digestifs, rash cutané, troubles lipidiques</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_protease>
+  <maladies:Inhibiteur_protease rdf:about="http://www.medecine.fr/maladies#Lopinavir_ritonavir">
+    <maladies:posologieARV>400mg/100mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>LPV/r</maladies:nomAbrge>
+    <maladies:nom>Lopinavir/ritonavir</maladies:nom>
+    <maladies:effetIndesirable>troubles digestifs</maladies:effetIndesirable>
+    <maladies:aPourEffetIndesirable>
+      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#pancreatite">
+        <maladies:nom>pancréatite</maladies:nom>
+        <maladies:name>pancreatite</maladies:name>
+        <maladies:substituerPar>
+          <maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Nevirapine">
+            <maladies:posologieARV>200mg/jour</maladies:posologieARV>
+            <maladies:nomAbrge>NVP</maladies:nomAbrge>
+            <maladies:nom>Nevirapine</maladies:nom>
+            <maladies:effetIndesirable>Toxicité cutanée, hépatites d'hypersensibilité</maladies:effetIndesirable>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#rash_modere">
+                <maladies:name>rash_modere</maladies:name>
+                <maladies:substituerPar>
+                  <maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Efavirenz">
+                    <maladies:posologieARV>600mg/jour</maladies:posologieARV>
+                    <maladies:nomAbrge>EFV</maladies:nomAbrge>
+                    <maladies:nom>Efavirenz</maladies:nom>
+                    <maladies:effetIndesirable>Rash, atteintes neurosensielles</maladies:effetIndesirable>
+                    <maladies:aPourEffetIndesirable>
+                      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#toxicite_systeme_nerveux">
+                        <maladies:nom>Toxicité sur le système nerveux central</maladies:nom>
+                        <maladies:name>toxicite_systeme_nerveux</maladies:name>
+                        <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Nevirapine"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                      </maladies:Effet_Indesirable>
+                    </maladies:aPourEffetIndesirable>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                  </maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse>
+                </maladies:substituerPar>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#rash_grave">
+                <maladies:nom>Rash grave</maladies:nom>
+                <maladies:name>rash_grave</maladies:name>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#hepatite">
+                <maladies:nom>Hépatite</maladies:nom>
+                <maladies:name>hepatite</maladies:name>
+                <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Efavirenz"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </maladies:Inhibiteur_non_nucleosidique_transcriptase_inverse>
+        </maladies:substituerPar>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Effet_Indesirable>
+    </maladies:aPourEffetIndesirable>
+    <maladies:aPourEffetIndesirable>
+      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#Diarrhee_vomissement_naussee">
+        <maladies:nom>Diarrhée, vomissement, nausée</maladies:nom>
+        <maladies:name>Diarrhee_vomissement_naussee</maladies:name>
+        <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Nevirapine"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Effet_Indesirable>
+    </maladies:aPourEffetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_protease>
+  <maladies:Inhibiteur_fusion rdf:about="http://www.medecine.fr/maladies#Maraviroc">
+    <maladies:posologieARV></maladies:posologieARV>
+    <maladies:nomAbrge>MVC</maladies:nomAbrge>
+    <maladies:nom>Maraviroc</maladies:nom>
+    <maladies:effetIndesirable></maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_fusion>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+DRV/r">
+    <maladies:nom>TDF/FTC+DRV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient7">
+    <maladies:date_naissance>2003-08-22</maladies:date_naissance>
+    <maladies:aPourCode>7</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+LPV/r">
+        <maladies:nom>TDF/FTC+LPV/r</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#FemmeEnceinte">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.medecine.fr/maladies#Patient"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </maladies:Patient>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#TDF+3TC+EFV">
+    <maladies:nom>TDF+3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+LPV/r_b">
+    <maladies:nom>ABC/3TC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF+FTC+LPV/r">
+    <maladies:nom>TDF+FTC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#TDF+3TC+RAL">
+    <maladies:nom>TDF+3TC+RAL</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:Inhibiteur_protease rdf:about="http://www.medecine.fr/maladies#Ritonavir">
+    <maladies:posologieARV>100mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>RTV</maladies:nomAbrge>
+    <maladies:nom>Ritonavir</maladies:nom>
+    <maladies:effetIndesirable>Manifestations digestives parfois intenses, parethésies péribuccales</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_protease>
+  <maladies:TraitementARV rdf:about="http://www.medecine.fr/maladies#AZT/FTC+LPV/r">
+    <maladies:nom>AZT/FTC+LPV/r</maladies:nom>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:TraitementARV>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+NVP">
+    <maladies:nom>AZT/3TC+NVP</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient6">
+    <maladies:date_naissance>2010-08-13</maladies:date_naissance>
+    <maladies:aPourCode>6</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+EFV">
+        <maladies:nom>ABC/3TC+EFV</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:PremiereLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+AZT">
+    <maladies:nom>ABC+3TC+AZT</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#AZT+3TC+EFV_b">
+    <maladies:nom>AZT+3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+LPV/r">
+    <maladies:nom>AZT/3TC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#ABC+3TC+LPV/r">
+    <maladies:nom>ABC+3TC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantMoins3ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#AdolescentPlus19Ans">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#Patient1">
+    <maladies:date_naissance>1991-08-10</maladies:date_naissance>
+    <maladies:aPourCode>1</maladies:aPourCode>
+    <maladies:aPourTraitement>
+      <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+ATV/r">
+        <maladies:nom>TDF/FTC+ATV/r</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:DeuxiemeLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourTraitement>
+      <maladies:TraitementARV rdf:about="http://www.medecine.fr/maladies#AZT/FTC/EFV">
+        <maladies:nom>AZT/FTC/EFV</maladies:nom>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:TraitementARV>
+    </maladies:aPourTraitement>
+    <maladies:aPourTraitement>
+      <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+ATV/r">
+        <maladies:nom>ABC/3TC+ATV/r</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:DeuxiemeLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient12">
+    <maladies:date_naissance>2002-09-14</maladies:date_naissance>
+    <maladies:aPourCode>12</maladies:aPourCode>
+    <maladies:aPourTraitement rdf:resource="http://www.medecine.fr/maladies#TDF/3TC+EFV"/>
+    <maladies:aPourTraitement>
+      <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+ATV/r">
+        <maladies:nom>AZT/3TC+ATV/r</maladies:nom>
+        <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+        <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+        <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:DeuxiemeLigne>
+    </maladies:aPourTraitement>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT/3TC+EFV">
+    <maladies:nom>AZT/3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#ABC/3TC+DRV/r">
+    <maladies:nom>ABC/3TC+DRV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF+FTC+LPV/r_b">
+    <maladies:nom>TDF+FTC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#EnfantPlus3Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Inhibiteur_protease rdf:about="http://www.medecine.fr/maladies#Atazanavir_ritonavir">
+    <maladies:posologieARV>300mg/100mg/jour</maladies:posologieARV>
+    <maladies:nomAbrge>ATV/r</maladies:nomAbrge>
+    <maladies:nom>Atazanavir/ritonavir</maladies:nom>
+    <maladies:effetIndesirable>Symptômes neurologiques périphériques,maux de tête, insomnie, vomissement, diarrhée,douleur abdominale, nausée,dyspepsie, ictère, rash, syndrome lipodystrophique,asthénie</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_protease>
+  <maladies:Patient rdf:about="http://www.medecine.fr/maladies#patient5">
+    <maladies:date_naissance>1997-08-02</maladies:date_naissance>
+    <maladies:aPourCode>5</maladies:aPourCode>
+    <maladies:aPourTraitement rdf:resource="http://www.medecine.fr/maladies#TDF/FTC+NVP"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Patient>
+  <maladies:DeuxiemeLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+LPV/r_b">
+    <maladies:nom>TDF/FTC+LPV/r</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:DeuxiemeLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/FTC+DTG">
+    <maladies:nom>TDF/FTC+DTG</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TAF/3TC/DTG">
+    <maladies:nom>TAF/3TC/DTG</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#recommende"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_2"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Inhibiteur_protease rdf:about="http://www.medecine.fr/maladies#Fosamprenavir">
+    <maladies:posologieARV></maladies:posologieARV>
+    <maladies:nomAbrge>FPV/r</maladies:nomAbrge>
+    <maladies:nom>Fosamprenavir</maladies:nom>
+    <maladies:effetIndesirable></maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_protease>
+  <maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse rdf:about="http://www.medecine.fr/maladies#Lamivudine">
+    <maladies:posologieARV>150mgX2/jour</maladies:posologieARV>
+    <maladies:nomAbrge>3TC</maladies:nomAbrge>
+    <maladies:nom>Lamivudine</maladies:nom>
+    <maladies:effetIndesirable>Effets indésirables de faible intensité et transitoire</maladies:effetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#AZT+3TC+EFV">
+    <maladies:nom>AZT+3TC+EFV</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#AdolescentMoins19Ans"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:PremiereLigne rdf:about="http://www.medecine.fr/maladies#TDF/3TC/DTG">
+    <maladies:nom>TDF/3TC/DTG</maladies:nom>
+    <maladies:indiqueePour rdf:resource="http://www.medecine.fr/maladies#Adulte"/>
+    <maladies:appartient rdf:resource="http://www.medecine.fr/maladies#alternatif"/>
+    <maladies:aPourSerologie rdf:resource="http://www.medecine.fr/maladies#VIH_1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:PremiereLigne>
+  <maladies:Inhibiteur_nucleotidique_transcriptase_inverse rdf:about="http://www.medecine.fr/maladies#Tenofovir">
+    <maladies:posologieARV>300mg/jour</maladies:posologieARV>
+    <maladies:nomAbrge>TDF</maladies:nomAbrge>
+    <maladies:nom>Tenofovir</maladies:nom>
+    <maladies:effetIndesirable>Hypophosphorémie, syndrome de Fanconi</maladies:effetIndesirable>
+    <maladies:aPourEffetIndesirable>
+      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#toxicite_renale">
+        <maladies:nom>Toxicité rénale</maladies:nom>
+        <maladies:name>toxicite_renale</maladies:name>
+        <maladies:substituerPar>
+          <owl:NamedIndividual rdf:about="http://www.medecine.fr/maladies#Zidovudine">
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#neutropenie_grave">
+                <maladies:nom>Neutropénie grave</maladies:nom>
+                <maladies:name>neutropenie_grave</maladies:name>
+                <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Tenofovir"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#intolerance_gastro_intestinale_severe">
+                <maladies:nom>intolerance gastro-intestinale sévère</maladies:nom>
+                <maladies:name>intolerance_gastro_intestinale_severe</maladies:name>
+                <maladies:substituerPar>
+                  <maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse rdf:about="http://www.medecine.fr/maladies#Abacavir">
+                    <maladies:posologieARV>600mg/jour</maladies:posologieARV>
+                    <maladies:posologieARV>300mgX2/jour</maladies:posologieARV>
+                    <maladies:nomAbrge>ABC</maladies:nomAbrge>
+                    <maladies:nom>Abacavir</maladies:nom>
+                    <maladies:effetIndesirable>Réactions d'hypersensibilité</maladies:effetIndesirable>
+                    <maladies:aPourEffetIndesirable>
+                      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#reaction_hypersensibilite">
+                        <maladies:nom>Réaction d'hypersensibilité</maladies:nom>
+                        <maladies:name>reaction_hypersensibilite</maladies:name>
+                        <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Zidovudine"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                      </maladies:Effet_Indesirable>
+                    </maladies:aPourEffetIndesirable>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                  </maladies:Inhibiteurs_nucleosidiques_transcripstase_inverse>
+                </maladies:substituerPar>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <maladies:posologieARV>300mgX2/jour</maladies:posologieARV>
+            <maladies:nom>Zidovudine</maladies:nom>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#acidose_lactique">
+                <maladies:nom>Acidose lactique</maladies:nom>
+                <maladies:name>acidose_lactique</maladies:name>
+                <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Tenofovir"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <rdf:type rdf:resource="http://www.medecine.fr/maladies#Inhibiteurs_nucleosidiques_transcripstase_inverse"/>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#anemie_grave">
+                <maladies:nom>Anémie grave(&lt;7.5 g/dl)</maladies:nom>
+                <maladies:name>anemie_grave</maladies:name>
+                <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Tenofovir"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+            <maladies:effetIndesirable>Toxicité hématologique, myopathies mitochondriales</maladies:effetIndesirable>
+            <maladies:nomAbrge>AZT</maladies:nomAbrge>
+            <maladies:aPourEffetIndesirable>
+              <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#lipodystrophie">
+                <maladies:nom>Lipodystrophie, Symdrome métabolique</maladies:nom>
+                <maladies:name>lipodystrophie</maladies:name>
+                <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Tenofovir"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </maladies:Effet_Indesirable>
+            </maladies:aPourEffetIndesirable>
+          </owl:NamedIndividual>
+        </maladies:substituerPar>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Effet_Indesirable>
+    </maladies:aPourEffetIndesirable>
+    <maladies:aPourEffetIndesirable>
+      <maladies:Effet_Indesirable rdf:about="http://www.medecine.fr/maladies#osteoporose">
+        <maladies:nom>Ostéoporose</maladies:nom>
+        <maladies:name>osteoporose</maladies:name>
+        <maladies:substituerPar rdf:resource="http://www.medecine.fr/maladies#Zidovudine"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </maladies:Effet_Indesirable>
+    </maladies:aPourEffetIndesirable>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </maladies:Inhibiteur_nucleotidique_transcriptase_inverse>
+</rdf:RDF>

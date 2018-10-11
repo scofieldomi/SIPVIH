@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipvih.view.AccueilController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../style/style.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Stade Clinique">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" prefHeight="419.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane prefHeight="417.0" prefWidth="331.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane prefHeight="629.0" prefWidth="428.0">
+                                             <children>
+                                                <Label layoutX="29.0" layoutY="467.0" prefHeight="35.0" prefWidth="228.0" text="Infections bactériennes">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox layoutX="36.0" layoutY="513.0" mnemonicParsing="false" text="Tuberculose">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <Label layoutX="26.0" layoutY="20.0" prefHeight="35.0" prefWidth="377.0" text="Infections parasitaires et fongiques">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox fx:id="Candidose_buccale_persistante" layoutX="39.0" layoutY="63.0" mnemonicParsing="false" text="Candidose buccale persisante">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="Toxoplasmose" layoutX="39.0" layoutY="153.0" mnemonicParsing="false" text="toxoplasmose du système nerveux central">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="Pneumocystose" layoutX="39.0" layoutY="188.0" mnemonicParsing="false" text="pneumocystose">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="Isosporose" layoutX="38.0" layoutY="221.0" mnemonicParsing="false" text="isosporose chronique">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <Label layoutX="31.0" layoutY="259.0" prefHeight="21.0" prefWidth="263.0" text="Infections virales">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox fx:id="Zona" layoutX="36.0" layoutY="294.0" mnemonicParsing="false" text="Zona">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox layoutX="36.0" layoutY="323.0" mnemonicParsing="false" text="infection à herpès simplex virus">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <Button fx:id="bOK" layoutX="252.0" layoutY="581.0" mnemonicParsing="false" onAction="#stadeclinique" prefHeight="44.0" prefWidth="141.0" text="Ok">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <CheckBox fx:id="Candidose_buccale_persistante1" layoutX="39.0" layoutY="92.0" mnemonicParsing="false" text="Infections fongiques des ongles">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="Candidose_buccale_persistante11" layoutX="39.0" layoutY="122.0" mnemonicParsing="false" text="Candidose oesophagienne">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox layoutX="36.0" layoutY="357.0" mnemonicParsing="false" text="infection à citomégalovirus">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox layoutX="38.0" layoutY="390.0" mnemonicParsing="false" text="leuco-encéphalite multifocale progressive">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox layoutX="39.0" layoutY="422.0" mnemonicParsing="false" text="encéphalopathies à VIH">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox layoutX="38.0" layoutY="545.0" mnemonicParsing="false" text="septicémies récurrentes">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <Button layoutX="117.0" layoutY="588.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="106.0" text="Retour">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="256.0">
+                                 <children>
+                                    <Label fx:id="labels" layoutX="18.0" layoutY="60.0" prefHeight="123.0" prefWidth="332.0" text="Ce Patient est en  :">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="sc" layoutX="53.0" layoutY="169.0" prefHeight="47.0" prefWidth="262.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          
+          <Tab text="Diagnostic">
+            <content>
+              <AnchorPane fx:id="anchorpane00" minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="809.0">
+                     <children>
+                        <ComboBox fx:id="signe" layoutX="216.0" layoutY="39.0" onAction="#diagnostique" prefHeight="25.0" prefWidth="223.0">                       
+                             <items>
+                                 <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Problèmes respiratoirs" />
+                                        <String fx:value="Diarrhée chronique" />
+                                        <String fx:value="Céphalées" />
+                                        <String fx:value="Fièvre d'origine indéterminée" />
+                                        <String fx:value="Adénophatie" />
+                                  </FXCollections>
+                             </items>
+                        </ComboBox>
+                        <Label layoutX="60.0" layoutY="42.0" text="Arbre decisonnel">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="autre_signe" layoutX="454.0" layoutY="39.0" mnemonicParsing="false" text="Autre signe" />
+                        <Separator layoutX="35.0" layoutY="80.0" prefHeight="32.0" prefWidth="676.0" />
+                        <BorderPane fx:id="panneausigne" layoutX="7.0" layoutY="96.0" prefHeight="536.0" prefWidth="854.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          
+          <Tab text="Traitement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
